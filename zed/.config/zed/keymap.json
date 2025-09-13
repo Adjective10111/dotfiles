@@ -1,0 +1,66 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-space": "editor::ShowCompletions",
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operator)",
+    "bindings": {
+      "g w": "vim::HelixJumpToWord"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space w": "vim::NextSubwordStart",
+      "space b": "vim::PreviousSubwordStart",
+      "space e": "vim::NextSubwordEnd",
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operator)",
+    "bindings": {
+      "g h": "vim::FirstNonWhitespace",
+      "g l": "vim::EndOfLine"
+    }
+  },
+  {
+    "context": "(vim_mode == normal || vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "bindings": {
+      "space f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "space k": "editor::Hover"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space k": "editor::Hover"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "g h": "editor::Hover"
+    }
+  }
+]

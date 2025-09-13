@@ -1,0 +1,163 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+right_format = """
+$package\
+$cmake\
+$cpp\
+$golang\
+$gradle\
+$java\
+$kotlin\
+$lua\
+$maven\
+$python\
+$rust\
+$nix_shell\
+$conda"""
+
+format = """
+$directory\
+$vcs\
+$fill\
+$cmd_duration\
+$status\
+$sudo\
+$username\
+$hostname\
+$time\
+$line_break\
+$jobs\
+$character"""
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+continuation_prompt = "[│](dimmed) "
+
+[character]
+success_symbol = '[\$](bold white)'
+error_symbol = '[\$](bold red)'
+vimcmd_symbol = '[:](bold grey)'
+vimcmd_replace_one_symbol = '[R](bold blue)'
+vimcmd_replace_symbol = '[R](bold yellow)'
+vimcmd_visual_symbol = '[V](bold yellow)'
+
+[directory]
+fish_style_pwd_dir_length = 1
+truncation_length = 8
+truncation_symbol = '…/'
+truncate_to_repo = false
+
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "cyan bold"
+
+read_only = " 󰌾"
+read_only_style = "red"
+
+repo_root_format = """
+[$before_root_path]($before_repo_root_style)\
+[$repo_root]($repo_root_style)\
+[$path]($style)[$read_only]($read_only_style) """
+before_repo_root_style = "dimmed"
+repo_root_style = "bold cyan"
+
+
+substitutions = [
+  { from = "^/media/adjective/([^/]*)/", to = "[mount#$1]/", regex = true },
+  { from = "([^\\]]*)/.config/", to = "*config:", regex = true },
+  { from = "([^\\]]*)/University/", to = "Uni:", regex = true },
+]
+
+[fill]
+symbol = '─'
+style = 'bold black'
+
+[cmd_duration]
+min_time = 2_000
+format = ' took [$duration]($style)'
+style = "yellow bold"
+
+[sudo]
+disabled = false
+format = " [$symbol]($style)"
+symbol = " "
+style = "bold red"
+
+[username]
+show_always = true
+format = " [$user]($style)"
+style_user = "italic bold green"
+
+[hostname]
+ssh_only = false
+ssh_symbol = "  "
+format = "[@]($style dimmed)[$hostname$ssh_symbol]($style)"
+style = "green bold italic"
+
+[localip]
+format = ' [ $localipv4]($style) '
+
+[status]
+disabled = false
+symbol = " "
+format = " [$symbol$status]($style)"
+
+[jobs]
+format = "[$symbol\\[$number\\]]($style) "
+symbol = '%'
+style = "bold yellow"
+number_threshold = 1
+symbol_threshold = 1
+
+[time]
+disabled = false
+format = " [ $time]($style)"
+style = "bold grey"
+
+[vcs]
+git_modules = "$git_branch$git_commit$git_state$git_metrics$git_status"
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+#############################
+#   module symbols as nerd  #
+#############################
+
+[nix_shell]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[java]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+
+
+
+
+
+
+
+

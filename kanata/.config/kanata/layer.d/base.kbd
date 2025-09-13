@@ -1,0 +1,113 @@
+(deflayer base
+  @plain-toggle
+  tab            q       w        e         r         t  y  u         i         o        p               [     ]    \
+  @esc-nav       @a-alt  @s-ctrl  @d-super  @f-shift  g  h  @j-shift  @k-super  @l-ctrl  @semicolon-alt  '     ret
+  @shift-symnum  z       x        c         v         b  n  m         ,         .        /               rsft
+  lctl           lmet    bspc                   @space-num                   @change-lang      rctl
+)
+
+(defalias
+  esc-nav
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      esc
+      (layer-while-held navigation)
+    )
+  space-num
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      spc
+      (multi (layer-switch symnum) (on-release tap-virtualkey clear))
+    )
+  shift-symnum
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      (one-shot 1000 (layer-while-held symnum))
+      lsft
+    )
+
+  change-lang
+    A-C-M-S-l
+
+  plain-toggle
+    (layer-switch plain)
+)
+
+(defalias
+  chxtf (chord text f)
+  chxtj (chord text j)
+  chxtk (chord text k)
+)
+
+(defchords text $hold-time
+  (f      ) f
+  (   j   ) j
+  (      k) k
+  (   j  k) ret
+  (f  j   ) bspc
+  (f     k) del
+)
+
+;; HRM -> ACGS -> G: Super, S: Shift
+(defalias
+  a-alt
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      a
+      lalt
+    )
+  s-ctrl
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      s
+      lctl
+    )
+  d-super
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      d
+      lmet
+    )
+  f-shift
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      @chxtf
+      lsft
+    )
+
+  j-shift
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      @chxtj
+      rsft
+    )
+  k-super
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      @chxtk
+      lmet
+    )
+  l-ctrl
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      l
+      rctl
+    )
+  semicolon-alt
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      ;
+      ralt
+    )
+)

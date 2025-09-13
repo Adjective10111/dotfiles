@@ -1,0 +1,12 @@
+(deflayer plain
+  @plain-return
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc                 ralt rctl
+)
+
+(defalias
+  plain-return
+    (layer-switch base)
+)

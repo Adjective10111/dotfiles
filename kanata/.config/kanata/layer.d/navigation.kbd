@@ -1,0 +1,8 @@
+(deflayer navigation
+  _
+  _     _  C-rght _    _    _    _    _    _    _    _    _    _    _
+  _     _    _    _    _    _    lft  down up  rght  _    _    _
+  _     _    del  _    _  C-lft  _    _    _    _    _    _
+  _    _    _              _                   _    _
+)
+

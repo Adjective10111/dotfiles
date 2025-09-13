@@ -1,0 +1,13 @@
+theme = "trans-tokyonight"
+
+[editor]
+mouse = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "underline"
+select = "block"
+
+[keys.normal]
+"C-y" = "scroll_up"
+"C-e" = "scroll_down"

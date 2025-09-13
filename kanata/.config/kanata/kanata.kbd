@@ -1,0 +1,48 @@
+;; ============================================================
+;; Kanata config
+;; CachyOS + Hyprland
+;;
+;; HRM -> ACGS -> G: Super, S: Shift
+;;
+;; Design:
+;;   base
+;;   - Caps tap: Esc
+;;   - Caps hold: navigation
+;;   - Space tap: Space
+;;   - Space hold: symnum
+;;   - Left Alt: Backspace
+;;   - Left Shift tap: one-shot symnum
+;;   - Delete: plain toggle
+;;
+;;   symnum
+;;   - Left hand symbols
+;;   - Right hand numbers
+;;   - caps: navigation
+;;   - n: function layer
+;;
+;; ============================================================
+
+(defcfg
+  process-unmapped-keys yes
+  delegate-to-first-layer yes
+)
+
+(defvar
+  dance-time 350
+  tap-time 200
+  hold-time 200
+)
+
+(defsrc
+  del
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc                 ralt rctl
+)
+
+(include layer.d/base.kbd)
+(include layer.d/plain.kbd)
+(include layer.d/function.kbd)
+(include layer.d/symnum.kbd)
+(include layer.d/navigation.kbd)

@@ -1,0 +1,112 @@
+(deflayermap (symnum)
+  _ nop9
+
+  caps (layer-switch navigation)
+
+  q S-2   ;; @ recording in vim
+  w S-8   ;; *
+  e Equal ;; = equals
+  r S-4   ;; $ Rials?
+  t S-3   ;; # tag
+  y S-1   ;; ! not
+
+  a @lsym-alt
+  s @lsym-ctrl
+  d @lsym-super
+  f @lsym-shift
+  g S-Minus     ;; underline
+
+  z S-Equal                               ;; + next to x
+  x (tap-dance $dance-time (Minus S-Equal)) ;; - x is remove
+  c Backquote                             ;; ` code block
+  v S-6                                   ;; ^ flipped
+  b Backslash                             ;; \
+
+;; ^^^^^^^^^
+;; left hand
+;; right hand
+;; vvvvvvvvvv
+
+  u 7 
+  i 8
+  o 9
+  p S-5
+  [ (layer-switch function)
+
+  h S-Backquote ;; home~
+  j @rsym-shift ;; 1
+  k @rsym-super ;; 2
+  l @rsym-ctrl  ;; 3
+  ; @rsym-alt   ;; 0
+
+  n 4
+  m 5
+  , 6
+  . _
+  / _
+)
+
+(defvirtualkeys
+  clear
+    (layer-switch base)
+)
+
+(defalias
+  lsym-alt
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      (tap-dance $dance-time (S-7 S-Backslash))
+      lalt
+    )
+  lsym-ctrl
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      (tap-dance $dance-time ([ ]))
+      lctl
+    )
+  lsym-super
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      (tap-dance $dance-time (S-[ S-]))
+      lmet
+    )
+  lsym-shift
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      (tap-dance $dance-time (S-9 S-0))
+      lsft
+    )
+
+  rsym-shift
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      1
+      rsft
+    )
+  rsym-super
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      2
+      lmet
+    )
+  rsym-ctrl
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      3
+      rctl
+    )
+  rsym-alt
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      0
+      ralt
+    )
+)
