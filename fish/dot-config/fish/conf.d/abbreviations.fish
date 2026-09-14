@@ -22,3 +22,5 @@ abbr --add untar 'tar -zxvf '
 abbr --add wget 'wget -c '
 abbr --add progcp 'rsync -ah --info=progress2'
 abbr --add stow 'stow --verbose --dotfiles'
+
+abbr --add history "history --show-time='%F %T '"
