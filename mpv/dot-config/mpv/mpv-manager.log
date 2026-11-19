@@ -1,0 +1,86 @@
+[2026-11-01 10:00:23] === MPV.Rocks Installer Log Started ===
+[2026-11-01 10:00:23] Timestamp: 2026-11-01T10:00:23+03:30
+[2026-11-01 10:00:23] [INFO] Config file saved to: /home/adjective/.config/mpv/mpv-manager.json
+[2026-11-01 10:00:23] [INFO] Created default config file: /home/adjective/.config/mpv/mpv-manager.json
+[2026-11-01 10:00:24] [INFO] Refreshing version check cache...
+[2026-11-01 10:00:24] [INFO] [Detection] Starting concurrent MPV app detection...
+[2026-11-01 10:00:24] [DEBUG] [Detection] Detected package manager family: arch
+[2026-11-01 10:00:25] [DEBUG] [Detection] Found MPV Package: 0.41.0-6.1
+[2026-11-01 10:00:25] [INFO] [Detection] Found 1 Package Manager apps
+[2026-11-01 10:00:25] [INFO] [Detection] Total detected apps: 1
+[2026-11-01 10:00:25] [INFO] [Detection] Adding newly detected app: MPV (mpv-package at /usr/bin/mpv)
+[2026-11-01 10:00:25] [INFO] Adding app to installed_apps: MPV
+[2026-11-01 10:00:25] [INFO] App type: app, Method: mpv-package, ID: app-3bdc315d7aaaa6f698f8512220b4b85c6b0ce0392603b4a8428d4fd8583a7bf3
+[2026-11-01 10:00:25] [INFO] Config file saved to: /home/adjective/.config/mpv/mpv-manager.json
+[2026-11-01 10:00:25] [INFO] Added 1 newly detected apps to config
+[2026-11-01 10:00:25] [INFO] Version check cache refreshed: 1 updates, 1 package versions
+[2026-11-01 10:00:25] [DEBUG] Desktop shortcut creation is disabled in settings
+[2026-11-01 10:00:25] [INFO] Web server listening on 127.0.0.1:6787
+[2026-11-01 10:00:25] [INFO] Browser opened automatically: http://127.0.0.1:6787
+[2026-11-01 10:00:26] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:09:02] [INFO] [API]Adopt app request received: app_name=MPV, method=mpv-package, ui_type=modernz
+[2026-11-01 10:09:03] [INFO] [SSE] Client disconnected from job stream (total events: 8)
+[2026-11-01 10:09:04] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:09:06] [ERROR] [API]Adopt job failed: unsafe UI configuration parent: overlay recovery parent "/home/adjective/.config/mpv" is not a real directory
+[2026-11-01 10:09:24] [INFO] [API]Adopt app request received: app_name=MPV, method=mpv-package, ui_type=modernz
+[2026-11-01 10:09:26] [INFO] [SSE] Client disconnected from job stream (total events: 64)
+[2026-11-01 10:09:26] [INFO] Preserved audio languages: [ja en]
+[2026-11-01 10:09:26] [INFO] Preserved subtitle languages: [en]
+[2026-11-01 10:09:26] [INFO] Preserved hardware decoder: auto
+[2026-11-01 10:09:26] [INFO] Preserved video output: gpu-next
+[2026-11-01 10:09:26] [INFO] Preserved scale filter: ewa_lanczossharp
+[2026-11-01 10:09:26] [ERROR] [API]Adopt job failed: unsafe UI configuration parent: overlay recovery parent "/home/adjective/.config/mpv" is not a real directory
+[2026-11-01 10:09:26] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:09:38] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:09:38] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:09:45] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:09:46] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:10:26] [INFO] Config file saved to: /home/adjective/.config/mpv/mpv-manager.json
+[2026-11-01 10:10:26] [INFO] Saved HWA decoder preference: nvdec,vaapi,auto
+[2026-11-01 10:10:27] [INFO] Updated mpv.conf at: /home/adjective/.config/mpv/mpv.conf
+[2026-11-01 10:10:28] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:10:28] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:10:34] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:10:35] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:11:50] [INFO] Updated mpv.conf at: /home/adjective/.config/mpv/mpv.conf
+[2026-11-01 10:11:53] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:11:54] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:12:26] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:12:27] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:13:37] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:13:37] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:13:48] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:13:49] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:13:51] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:13:52] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:13:52] [DEBUG] Keyring: native store unavailable: failed to retrieve password: The name is not activatable
+[2026-11-01 10:13:52] [WARN] [API]Keyring status detection failed: failed to retrieve password: The name is not activatable
+[2026-11-01 10:14:05] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:14:06] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:14:11] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:14:11] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:16:19] [INFO] [API]Adopt app request received: app_name=MPV, method=mpv-package, ui_type=modernz
+[2026-11-01 10:16:20] [INFO] [SSE] Client disconnected from job stream (total events: 11)
+[2026-11-01 10:16:20] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:16:22] [INFO] Preserved audio languages: [ja en]
+[2026-11-01 10:16:22] [INFO] Preserved subtitle languages: [en]
+[2026-11-01 10:16:22] [INFO] Preserved hardware decoder: nvdec,vaapi,auto
+[2026-11-01 10:16:22] [INFO] Preserved video output: gpu-next
+[2026-11-01 10:16:22] [INFO] Preserved scale filter: ewa_lanczossharp
+[2026-11-01 10:16:22] [INFO] Config file saved to: /home/adjective/.config/mpv/mpv-manager.json
+[2026-11-01 10:16:23] [INFO] Config file saved to: /home/adjective/.config/mpv/mpv-manager.json
+[2026-11-01 10:16:23] [INFO] Updated app MPV (app-3bdc315d7aaaa6f698f8512220b4b85c6b0ce0392603b4a8428d4fd8583a7bf3): managed=true, uiType=modernz
+[2026-11-01 10:16:23] [INFO] [API]Adopt job completed successfully: MPV
+[2026-11-01 10:16:23] [INFO] [SSE] Client disconnected from job stream (total events: 47)
+[2026-11-01 10:16:23] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:16:56] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:16:57] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:16:58] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:16:59] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:17:02] [INFO] Updated mpv.conf at: /home/adjective/.config/mpv/mpv.conf
+[2026-11-01 10:17:09] [INFO] [SSE] Client disconnected from job stream (total events: 0)
+[2026-11-01 10:17:09] [INFO] [SSE] Client connected to job stream: job_id=
+[2026-11-01 10:17:13] [INFO] Shutdown requested via Web UI
+[2026-11-01 10:17:14] [INFO] [SSE] Job stream closed for server shutdown
+[2026-11-01 10:17:14] [INFO] Shutting down HTTP server...
+[2026-11-01 10:17:14] === MPV.Rocks Installer Log Ended ===
