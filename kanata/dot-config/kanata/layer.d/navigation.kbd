@@ -1,8 +1,18 @@
-(deflayer navigation
-  _
-  _     _  C-rght _    _    _    _    _    _    _    _    _    _    _
-  _     _    _    _    _    _    lft  down up  rght  _    _    _
-  _     _    del  _    _  C-lft  _    _    _    _    _    _
-  _    _    _              _                   _    _
+(deflayermap (navigation)
+  _ nop9
+  
+  h lft
+  j down
+  k up
+  l rght
+
+  w C-rght
+  b C-lft
+
+  u pgup
+  n pgdn
+  
+  x del
+  d bspc
 )
 
