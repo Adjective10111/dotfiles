@@ -1,5 +1,5 @@
 (deflayer base
-  @plain-toggle
+  @plain-toggle @pgupdn @endhome
   tab            q       w        e         r         t  y  u         i         o        p               [     ]    \
   @esc-nav       @a-alt  @s-ctrl  @d-super  @f-shift  g  h  @j-shift  @k-super  @l-ctrl  @semicolon-alt  '     ret
   @shift-symnum  z       x        c         v         b  n  m         ,         .        /               rsft
@@ -7,31 +7,20 @@
 )
 
 (defalias
+  pgupdn
+    (t! doubletap pgup pgdn)
+  endhome
+    (t! doubletap end home)
+
   esc-nav
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      esc
-      (layer-while-held navigation)
-    )
+    (t! taphold esc (layer-while-held navigation))
   space-num
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      spc
-      (multi (layer-switch symnum) (on-release tap-virtualkey clear))
-    )
+    (t! taphold spc (t! layer-persist symnum))
   shift-symnum
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      (one-shot 1000 (layer-while-held symnum))
-      lsft
-    )
+    (t! taphold (one-shot 1000 (layer-while-held symnum)) lsft)
 
   change-lang
     A-C-M-S-l
-
   plain-toggle
     (layer-switch plain)
 )
@@ -54,60 +43,20 @@
 ;; HRM -> ACGS -> G: Super, S: Shift
 (defalias
   a-alt
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      a
-      lalt
-    )
+    (t! taphold a lalt)
   s-ctrl
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      s
-      lctl
-    )
+    (t! taphold s lctl)
   d-super
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      d
-      lmet
-    )
+    (t! taphold d lmet)
   f-shift
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      @chxtf
-      lsft
-    )
+    (t! taphold @chxtf lsft)
 
   j-shift
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      @chxtj
-      rsft
-    )
+    (t! taphold @chxtj rsft)
   k-super
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      @chxtk
-      lmet
-    )
+    (t! taphold @chxtk lmet)
   l-ctrl
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      l
-      rctl
-    )
+    (t! taphold l rctl)
   semicolon-alt
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      ;
-      ralt
-    )
+    (t! taphold ; ralt)
 )

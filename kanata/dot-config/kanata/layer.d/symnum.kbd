@@ -16,16 +16,13 @@
   f @lsym-shift
   g S-Minus     ;; underline
 
-  z S-Equal                               ;; + next to x
-  x (tap-dance $dance-time (Minus S-Equal)) ;; - x is remove
-  c Backquote                             ;; ` code block
-  v S-6                                   ;; ^ flipped
-  b Backslash                             ;; \
+  z S-Equal                       ;; + next to x
+  x (t! doubletap Minus S-Equal)  ;; - x is remove
+  c Backquote                     ;; ` code block
+  v S-6                           ;; ^ flipped
+  b Backslash                     ;; \
 
-;; ^^^^^^^^^
-;; left hand
-;; right hand
-;; vvvvvvvvvv
+;; ^LEFT^ - vRIGHTv
 
   u 7 
   i 8
@@ -46,67 +43,22 @@
   / _
 )
 
-(defvirtualkeys
-  clear
-    (layer-switch base)
-)
-
 (defalias
   lsym-alt
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      (tap-dance $dance-time (S-7 S-Backslash))
-      lalt
-    )
+    (t! taphold (t! doubletap S-7 S-Backslash) lalt)
   lsym-ctrl
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      (tap-dance $dance-time ([ ]))
-      lctl
-    )
+    (t! taphold (t! doubletap [ ]) lctl)
   lsym-super
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      (tap-dance $dance-time (S-[ S-]))
-      lmet
-    )
+    (t! taphold (t! doubletap S-[ S-]) lmet)
   lsym-shift
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      (tap-dance $dance-time (S-9 S-0))
-      lsft
-    )
+    (t! taphold (t! doubletap S-9 S-0) lsft)
 
   rsym-shift
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      1
-      rsft
-    )
+    (t! taphold 1 rsft)
   rsym-super
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      2
-      lmet
-    )
+    (t! taphold 2 lmet)
   rsym-ctrl
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      3
-      rctl
-    )
+    (t! taphold 3 rctl)
   rsym-alt
-    (tap-hold-release
-      $tap-time
-      $hold-time
-      0
-      ralt
-    )
+    (t! taphold 0 ralt)
 )

@@ -1,0 +1,24 @@
+(defvirtualkeys
+  clear
+    (layer-switch base)
+)
+
+(deftemplate taphold (tap-action hold-action)
+    (tap-hold-release
+      $tap-time
+      $hold-time
+      $tap-action
+      $hold-action
+    )
+)
+
+(deftemplate layer-persist (layer)
+	(multi
+		(layer-switch $layer)
+		(on-release tap-virtualkey clear)
+	)
+)
+
+(deftemplate doubletap (first second)
+	(tap-dance $dance-time ($first $second))
+)

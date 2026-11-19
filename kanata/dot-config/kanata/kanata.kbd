@@ -28,19 +28,20 @@
 )
 
 (defvar
-  dance-time 350
   tap-time 200
   hold-time 200
+  dance-time 350
 )
 
 (defsrc
-  del
+  del pgup end
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps  a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft  z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc                 ralt rctl
 )
 
+(include templates.kbd)
 (include layer.d/base.kbd)
 (include layer.d/plain.kbd)
 (include layer.d/function.kbd)
