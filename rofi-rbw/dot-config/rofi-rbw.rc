@@ -1,0 +1,4 @@
+action=type
+prompt='*> '
+clear-after=30
+
