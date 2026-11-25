@@ -1,0 +1,66 @@
+matches:
+  # Simple text replacement
+  - trigger: ";espanso"
+    replace: "Hi there!"
+
+  # date time manipulation
+  - regex: (?P<days>[-+]?\d+)date
+    replace: "{{date}}"
+    vars:
+      - name: seconds
+        type: shell
+        params:
+          cmd: "math '{{days}}*86400'"
+          shell: fish
+      - name: date
+        type: date
+        params:
+          format: "%F"
+          offset: "{{seconds}}"
+
+  - regex: (?P<minutes>[-+]?\d+)time
+    replace: "{{clock}}"
+    vars:
+      - name: seconds
+        type: shell
+        params:
+          cmd: "math '{{minutes}}*60'"
+          shell: fish
+      - name: clock
+        type: date
+        params:
+          format: "%R"
+          offset: "{{seconds}}"
+
+  # info from rbw
+  - trigger: ";mail"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'rbw get self --field email'
+  - trigger: ";wmail"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'rbw get self --field "work email"'
+
+  - trigger: ";phone"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'rbw get self --field phone'
+
+  - trigger: ";ssn"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'rbw get self --field ssn'
+
