@@ -3,7 +3,7 @@
 hl.config({
 	input = {
 		kb_layout = "us,ir",
-		kb_options = "caps:escape,grp:alt_space_toggle",
+		kb_options = "caps:escape",
 		accel_profile = "flat",
 		scroll_method = "2fg",
 		follow_mouse = 2,
